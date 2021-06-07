@@ -7,6 +7,33 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    // let re = /[\W_]/g;
+    // let lowRegStr = str.toLowerCase().replace(re, '');
+    let splitStr = str.split('');
+    let reserveArr = splitStr.reverse();
+    let joinArr= reserveArr.join('');
+
+    if (joinArr === str){
+        return true
+    } else {
+        return false
+    }  
+
+    // return joinArr === str
+}
+
+// Other answers
+
+// function palindrome(str){
+//     return str.split('').every((char, i) =>{
+//         return char === str[str.length-i -1]
+
+//     })
+// }
 
 module.exports = palindrome;
+
+
+
+ 
