@@ -9,7 +9,7 @@ function maxChar(str) {
 
     const characters = {};
     let max = 0;
-    let maxChar= "";
+    let maxChar= "";  
 
     for (let character of str) {
     // this is saying that if at any specific character in characters,
