@@ -26,7 +26,7 @@ if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length){
 // iterate through the keys in of one of the charMaps and compare it to 
 // the other one, if it's not the same, then they are not anagrams
 
-// because it's an object, we use for ...in
+// because the maps are object, we use for ...in; we use for...let with arrays
 for (let char in aCharMap){
     if (aCharMap[char] !== bCharMap[char]){
         return false;
