@@ -48,7 +48,7 @@ module.exports = steps;
 /////////////////////////////////////////
 // Solution using the for loop
 /////////////////////////////////////////
-
+// function steps(n, row=0, stair = "") {
 // for (let row = 0; row<n; row++){
 //     let stair = "";
 
