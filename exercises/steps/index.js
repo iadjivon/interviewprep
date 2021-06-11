@@ -17,6 +17,52 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+/////////////////////////////////////////
+//Solution
+/////////////////////////////////////////
+
+function steps(n, row=0, stair = "") {
+// check base case 
+if (n === row){
+    return;
+}
+
+if (n === stair.length){
+    console.log(stair);
+    return steps (n, row+1)
+}
+
+if (stair.length <=row){
+    stair += "#";
+} else {
+    stair +=" ";
+}
+ steps(n, row, stair);
+}
+
 
 module.exports = steps;
+
+
+/////////////////////////////////////////
+// Solution using the for loop
+/////////////////////////////////////////
+
+// for (let row = 0; row<n; row++){
+//     let stair = "";
+
+//     for (let column = 0; column< n; column++){
+//         if (column <= row){
+//             stair+= "#";
+//         } else {
+//             stair += " ";
+//         }
+//     }
+//     console.log(stair);
+// }
+
+
+// }
+
+// module.exports = steps;
