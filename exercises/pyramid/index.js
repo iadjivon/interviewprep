@@ -14,23 +14,51 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
-    const midpoint = Math.floor((n+n-1)/2);
+function pyramid(n, row = 0, level ="") {
+    if (row === n){
+        return;
+    }
 
-    for (let row = 0; row<n; row++){
-            let level = "";
-        
-            for (let column = 0; column < n + n-1; column++){
-                    if (midpoint - row <= column && midpoint + row >= column){
-                        level += '#'
-                    } else {
-                        level +=" "
-                    }
+    if (level.length === 2 * n -1) {
+        console.log(level);
+        return pyramid(n, row +1)
+    }
 
-            }
-            console.log(level);
-        }
-        
+    const midpoint = Math.floor((2* n -1)/2)
+    let add;
+
+    if (midpoint - row <= level.length && midpoint + row >= level.length){
+        add = "#"
+    } else {
+        add = " "
+    }
+
+        pyramid(n, row, level + add);
+   
+
 }
 
 module.exports = pyramid;
+
+
+
+// function pyramid(n) {
+//     const midpoint = Math.floor((n+n-1)/2);
+
+//     for (let row = 0; row<n; row++){
+//             let level = "";
+        
+//             for (let column = 0; column < n + n-1; column++){
+//                     if (midpoint - row <= column && midpoint + row >= column){
+//                         level += '#'
+//                     } else {
+//                         level +=" ";
+//                     }
+
+//             }
+//             console.log(level);
+//         }
+        
+// }
+
+// module.exports = pyramid;
